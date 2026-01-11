@@ -1,4 +1,5 @@
 import express from "express";
+import { secrets } from "./config/env.js";
 
 
 //Import different routes
@@ -7,16 +8,12 @@ import moveRoutes from "./routes/movieRoutes.js"
 const app = express()
 
 app.get("/", (_req,res) => {
-    res.json({
-        "success": true,
-        "message": "this is a small Marvel Cinematic Universe API !!!"
-    })
+    res
+    .send("Server is up and running")
 })
 
 app.use("/api/movies", moveRoutes)
 
-const PORT = 5001;
-
-app.listen(PORT, () => {
-    console.log(`server is running on port: ${PORT}`)
+app.listen(secrets.PORT, () => {
+    console.log(`server is running on port: ${secrets.PORT}`)
 })
