@@ -6,7 +6,7 @@ import moveRoutes from "./routes/movieRoutes.js"
 
 const app = express()
 
-app.get("/health", (_req,res) => {
+app.get("/", (_req,res) => {
     res.json({
         "success": true,
         "message": "this is a small Marvel Cinematic Universe API !!!"
