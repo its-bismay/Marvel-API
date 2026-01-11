@@ -14,6 +14,8 @@ app.get("/", (_req,res) => {
 
 app.use("/api/movies", moveRoutes)
 
-app.listen(secrets.PORT, () => {
-    console.log(`server is running on port: ${secrets.PORT}`)
-})
+// app.listen(secrets.PORT, () => {
+//     console.log(`server is running on port: ${secrets.PORT}`)
+// })
+
+export default app;
